@@ -1,0 +1,106 @@
+<title>Document</title>
+<head>
+<style>
+    .header
+    {
+        padding: 10px;
+        text-align: center;
+        background-image:linear-gradient(to  right,#ededa7,#f99c9c);
+        color: white;
+    }
+    body{
+        background-color: azure;
+    }
+    img{
+        
+        width:100%;
+        height:400px;
+    }
+   
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color:white;
+    
+}
+h1{
+    font-size:40px;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to  right,#ededa7,#f99c9c);
+    position: absolute;
+            bottom: 0; 
+            width: 100%;
+}
+
+h2{
+    color:white;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+</style>
+</head>
+<body OnLoad="swapPic()">
+   <div class="header">
+    <h1>校园卡管理系统</h1>
+   </div>
+ <script language="javascript" type="text/javascript">
+   var useRand = 0;
+   images = new Array;
+   images[1] = new Image();
+   images[1].src = "11.jpg";
+   
+   images[2] = new Image();
+   images[2].src = "12.jpg";
+   
+   images[3] = new Image();
+   images[3].src = "13.jpg";
+   
+   function swapPic(){
+       useRand=(useRand+1)%(images.length-1);
+       if(useRand==0)
+            useRand=3;
+       document.randimg.src = images[useRand].src;	
+       
+       setTimeout('swapPic()',2000);
+   }
+   
+ </script>
+ <div class="navbar">
+    
+    <a href="基本信息.html">基本信息</a>
+    <a href="账单信息.html">账单信息</a>
+    <a href="银行卡关联.html">银行卡关联</a>
+    <a href="银行卡充值.html">银行卡充值</a>
+    <a href="线上消费.html">线上消费</a>
+    <a href="挂失.html">挂失</a>
+    <a href="解挂.html">解挂</a>
+    <a href="帮助中心.html">帮助中心</a>
+    
+  </div>
+
+  
+ <img name ="randimg">
+ <div class="footer">
+    <h2>@该吃饺子了</h2>
+  </div>
+</body>
+<ml>
