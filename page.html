@@ -1,5 +1,6 @@
 <title>Document</title>
 <head>
+<meta charset="UTF-8"> 
 <style>
     .header
     {
@@ -17,44 +18,94 @@
         height:400px;
     }
    
-/* 导航 */
-.navbar {
-    overflow: hidden;
-    background-color:white;
-    
-}
+
 h1{
     font-size:40px;
 }
-/* 导航栏样式 */
-.navbar a {
-    float: left;
-    display: block;
-    color: gray;
-    text-align: center;
-    padding: 14px 30px;
-    text-decoration: none;
-    font-size: 20px;
-}
-
 
 /* 底部 */
 .footer {
-    padding: 20px;
+    padding: 30.5px;
     text-align: center;
     background-image: linear-gradient(to  right,#ededa7,#f99c9c);
     position: absolute;
-            bottom: 0; 
-            width: 100%;
+    bottom: 0; 
+    width: 1402.5px;
 }
 
 h2{
     color:white;
 }
 
-/* 右侧链接*/
-.navbar a.right {
-    float: right;
+/* 导航栏容器 */
+.navbar {
+  overflow: hidden;
+  background-color: #FFF5EE;
+  font-family: Arial;
+
+}
+
+/* 导航栏内的链接 */
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 下拉容器 */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* 下拉按钮 */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: grey;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* 对手机垂直对齐很重要 */
+  margin: 0; /* 对手机垂直对齐很重要 */
+}
+
+/* 为悬停时的导航栏链接添加背景颜色 */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+/* 下拉内容（默认隐藏）*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFF5EE;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* 下拉列表中的链接 */
+.dropdown-content a {
+  float: none;
+  color: grey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* 为悬停时的下拉链接添加灰色背景颜色 */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+/* 悬停时显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 </style>
 </head>
@@ -84,18 +135,24 @@ h2{
    }
    
  </script>
- <div class="navbar">
-    
-    <a href="基本信息.html">基本信息</a>
-    <a href="账单信息.html">账单信息</a>
-    <a href="银行卡关联.html">银行卡关联</a>
-    <a href="银行卡充值.html">银行卡充值</a>
-    <a href="线上消费.html">线上消费</a>
-    <a href="挂失.html">挂失</a>
-    <a href="解挂.html">解挂</a>
-    <a href="帮助中心.html">帮助中心</a>
-    
+<div class="navbar">
+  <a href="#">基本信息</a>
+  <a href="#">账单信息</a>
+  <a href="#">银行卡关联</a>
+  <a href="#">银行卡充值</a>
+  <div class="dropdown">
+    <button class="dropbtn">线上消费<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="#">电费缴纳</a>
+      <a href="#">水费缴纳</a>
+      <a href="food.php">线上订餐</a>
+    </div>
   </div>
+  <a href="#">挂失</a>
+  <a href="#">解挂</a>
+  <a href="#">帮助中心</a>
+  
+</div>
 
   
  <img name ="randimg">
