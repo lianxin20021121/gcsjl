@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户登录</title>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        }
+        .login-wrapper {
+            background-color: #fff;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            color:#abc1ee;
+           
+        }
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128, 125, 125);
+            font-size: 15px;
+            outline: none;
+        }
+        .input-item:placeholder {
+            text-transform: uppercase;
+        }
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right, #ededa7, #f99c9c);
+            color: #fff;
+        }
+        
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+        .btn a {
+            text-decoration-line: none;
+            color: #abc1ee;
+            background-color:green;
+        }
+      input[type="submit"]{
+            /* 设置宽高 */
+            width: 150px;
+            height: 40px;
+
+            /* 内部文本居中 */
+            text-align: center;
+
+            /* 圆角边框 */
+            border-radius: 5px;
+
+            /* 设置字体 */
+            font:16px "黑体";
+
+            /* 设置背景颜色 */
+            background-color: #fbc2eb;
+        }
+
+    </style>
+</head>
+ 
+<body >
+
+<div class=container>
+	<div class="login-wrapper">
+		<form action="denglu.php" method="post">
+		 		<div class="header">Login</div>
+		 <!--		
+			<table class=form-wrapper>
+			<tr><th>用户名：</th><td><input type="text" name="username"/></td></tr>
+			<tr><th>密码：</th><td><input type="password" name="password"/></td></tr>
+			
+			<tr><th></th><td><input type="submit" value="登录"/><a href="register.php"><input type="button" value='前往注册'></a></td></tr>
+			
+			</table>
+		-->
+		
+	
+                <input type="text" name="username" placeholder="username" class="input-item">
+                <input type="password" name="password" placeholder="password" class="input-item">
+               <div align="center">
+               <input type="submit" value="Login Rightnow!"/>
+         </div>
+                 <div class="msg">
+                Don't have account?
+                <a href="register.php">Sign up</a>
+            </div>
+           
+			
+	
+		</form>
+	</div>
+</div>
+</body>
+</html>
